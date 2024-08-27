@@ -1,0 +1,41 @@
+/* 导航栏 */
+nav {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    /* 使用space-between将内容分布在两端 */
+    align-items: center;
+}
+
+nav img {
+    margin-right: 50px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* 导航栏字体css */
+nav a:hover {
+    color: #59baff;
+    /* 鼠标悬停时文字颜色 */
+}
+
+nav a {
+    color: white;
+    /* 默认文字颜色 */
+    text-decoration: none;
+    /* 去除下划线 */
+    transition: color 0.3s ease;
+    margin-right: 50px;
+    /* 文字间距 */
+    font-size: 25px;
+    /* 字体大小 */
+}
+    

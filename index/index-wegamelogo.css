@@ -1,0 +1,22 @@
+/* 我们是谁？—— 游戏图标 */
+.wegame {
+    display: flex;
+    flex-direction: row; /* 横向排布 */
+}
+
+.wegame_icon_item {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding:20px; /* 调整间距 */
+}
+
+/* img.wegame_icon_item  {
+    display:flex;
+    justify-content:center;
+} */
+
+p.wegame_icon_item {
+    font-size: 14px; /* 文字大小 */
+    text-align: justify;
+}
