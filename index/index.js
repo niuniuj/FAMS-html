@@ -7,19 +7,6 @@ $(function () {
     $("#root").fullpage();
 });
 
-//标题检测显示
-window.onload = function () {
-    var originalTitle = document.title;
-    document.addEventListener('visibilitychange', function () {
-        if (document.visibilityState === 'visible') {
-            document.title = 'FAMS';    //在线
-        } else {
-            document.title = '人呢?( ´•.• ` )';     //离线
-        }
-    }
-    );
-};
-
 // 副标题轮换
 const subtitles = ["一个奇奇怪怪的服务器", "为斯卡蒂献上心脏", "博士,还不能休息哟!"];    // 这里添加副标题轮换内容
 let currentIndex = 0;
@@ -60,8 +47,13 @@ changeSubtitle();
 
 
 // 我们是谁？—— 游戏图标滚动
+const carouselContainer = document.getElementById('wegame');
+const carouselItems = carouselContainer.getElementsByClassName('wegame_icon_item');
 
-
-
-
-
+carouselContainer.addEventListener('animationiteration', function() {
+    if (carouselContainer.scrollLeft <= carouselItems[0].offsetLeft) {
+        const firstItem = carouselItems[0];
+        carouselContainer.appendChild(firstItem);
+        carouselContainer.scrollLeft = 0;
+    }
+});

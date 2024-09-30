@@ -1,15 +1,12 @@
 /* 我们是谁？—— 游戏图标 */
 .wegame {
     display: flex;
-    flex-direction: row; /* 横向排布 */
+    flex-direction: row;
+    /* 横向排布 */
+    animation: myfirst 4s linear infinite;
+    animation-timing-function:cubic-bezier(0.42,0,0.58,1);
 }
 
-.wegame_icon_item {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    padding:20px; /* 调整间距 */
-}
 
 /* img.wegame_icon_item  {
     display:flex;
@@ -17,6 +14,23 @@
 } */
 
 p.wegame_icon_item {
-    font-size: 14px; /* 文字大小 */
+    font-size: 14px;
+    /* 文字大小 */
     text-align: justify;
+}
+
+/* 滚动动画 */
+@keyframes myfirst {
+    0% {transform: translateX(20px);}
+    100% {transform: translateX(-120px);}
+}
+
+.wegame_icon_item {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    /* 调整间距 */
+
+    
 }
